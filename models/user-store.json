@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "firstName": "homer",
+      "lastName": "simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "firstName": "marge",
+      "lastName": "simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Rosanne",
+      "lastName": "Birney",
+      "email": "rosanne@gmail.com",
+      "password": "secret",
+      "id": "4159f0e4-bc67-40d9-9e22-a3cd320df6a9"
+    },
+    {
+      "firstName": "Rosanne",
+      "lastName": "Birney",
+      "email": "rosanne31@gmail.com",
+      "password": "secret",
+      "id": "5b8522c5-c807-43ba-8b73-242df3b1908c",
+      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1713540539/htocgjk4fwfmcshytztz.jpg"
+    }
+  ]
+}
