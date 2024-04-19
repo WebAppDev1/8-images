@@ -1,0 +1,28 @@
+<tr id="song{{@index}}">
+  <td>
+    {{capitalise title}}
+  </td>
+  <td>
+    {{capitalise artist}}
+  </td>
+  <td>
+    {{capitalise genre}}
+  </td>
+  <td>
+    {{duration}}
+  </td>
+  <td class="center aligned">
+    <button class="ui icon button" title="Edit song" id="showEdit{{@index}}">
+      <i class="ui pencil icon"></i>
+    </button>
+  </td>
+  <td class="center aligned">
+    <a href="/playlist/{{playlistId}}/deletesong/{{id}}" class="ui icon button delsong"  title="Delete song">
+      <i class="ui trash icon"></i>
+    </a>
+  </td>
+</tr>
+
+
+
+

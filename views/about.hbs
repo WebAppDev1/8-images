@@ -1,0 +1,71 @@
+{{> menu id="about"}}
+
+<section class="ui center aligned middle aligned segment">
+  
+  <h2>Your app statistics</h2>
+  <p>
+    Thanks for using our app!
+  </p>
+  
+  <div class="ui center aligned grid">
+    <div class="sixteen wide column">
+      
+        <div class="ui centered three statistics">
+          <div class="red statistic">
+            <div class="value">
+              <i class="microphone icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumPlaylists}} playlists
+            </div>
+          </div>
+
+          <div class="orange statistic">
+            <div class="value">
+              <i class="music icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumSongs}} songs
+            </div>
+          </div>    
+      
+          <div class="yellow statistic">
+            <div class="value">
+              <i class="fast forward icon"></i> 
+            </div>
+            <div class="label">
+              Average songs per <br> playlist: {{average}}
+            </div>
+          </div>    
+        </div>
+      
+    </div>
+    
+    <div class="sixteen wide column">
+      
+        <div class="ui centered two statistics">
+          <div class="green statistic">
+            <div class="value">
+              <i class="plus square outline icon"></i> 
+            </div>
+            <div class="label">
+              Largest playlist: <br> {{largest}}
+            </div>
+          </div>
+
+          <div class="blue statistic">
+            <div class="value">
+              <i class="minus square outline icon"></i> 
+            </div>
+            <div class="label">
+              Smallest playlist: <br> {{smallest}}
+            </div>
+          </div>    
+         
+        </div>
+      
+    </div>
+    
+  </div>
+
+</section>

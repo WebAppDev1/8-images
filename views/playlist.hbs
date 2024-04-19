@@ -1,0 +1,13 @@
+{{> menu}}
+
+
+
+<section class="ui center aligned middle aligned segment">
+  {{#with singlePlaylist}}
+  <h2 class="ui header">
+    {{uppercase title}}
+  </h2>
+  {{> listsongs}}
+  {{> addsong}}
+  {{/with}}
+</section>
