@@ -1,22 +1,52 @@
 <section class="ui left aligned middle aligned segment">
-  
+
   <h2>Playlist App Dashboard</h2>
-  
+
   {{#unless playlists}}
     <h3 class="ui message">
       Start adding your playlists!
     </h3>
   {{/unless}}
-
+  
   <div class="ui centered cards">
+    
     {{#each playlists}}
       <div class="ui card">
         <div class="image">
           <img src="{{picture}}">
         </div>
         <div class="content">
-          <a class="header">{{title}}</a>
+          <a class="header">{{uppercase title}}</a> 
+          <p>
+            <i class="music icon"></i>
+            {{#if songs}}
+              Total songs: {{songs.length}}
+            {{else}}
+              Empty playlist!
+            {{/if}}
+
+            {{#if date}}
+              <br>
+              <i class="calendar alternate outline icon"></i>
+              Created on <i>{{formatDate date}}</i>
+            {{/if}}
+          </p>
+          {{#if rating}}
+            <p>
+                <span 
+                   class="ui yellow disabled rating" 
+                   data-icon="star" 
+                   data-rating="{{rating}}" 
+                   data-max-rating="5">
+                </span>
+
+                <span style="color: grey; font-size: 90%; font-style: italic">
+                {{highlightPopular rating}}
+              </span>
+            </p>
+          {{/if}}
         </div>
+        
         <div class="extra content">
           <a href="/playlist/{{id}}" class="ui icon button">
             <i class="icon folder open"></i>
@@ -25,26 +55,9 @@
             <i class="icon trash"></i>
           </a>
         </div>
+        
       </div>
     {{/each}}
+    
   </div>
-  
-<!--        {{> listOnePlaylist playlistId=id}}
-       {{> editplaylist playlistId=id}}
- 
-  
-  <script>
-         document.querySelector("#showEdit{{@index}}").addEventListener ('click', () => {
-                          
-            document.querySelector("#playlist{{@index}}").style.display = "none";
-            document.querySelector("#edit{{@index}}").style.display = "block";
-         })
-         document.querySelector("#hideEdit{{@index}}").addEventListener ('click', () => {
-                                
-            document.querySelector("#playlist{{@index}}").style.display = "block";
-            document.querySelector("#edit{{@index}}").style.display = "none";
-         })
-        </script> -->
-
-
 </section>

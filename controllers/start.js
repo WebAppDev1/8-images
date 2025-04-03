@@ -5,7 +5,6 @@ import appStore from "../models/app-store.js";
 import accounts from './accounts.js';
 
 const start = {
-  
   createView(request, response) {
       const loggedInUser = accounts.getCurrentUser(request);
       logger.info("Start page loading!");
@@ -21,7 +20,7 @@ const start = {
       }
       else response.redirect('/');    
   },
-  
+
 };
 
 export default start;

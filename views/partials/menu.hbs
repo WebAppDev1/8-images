@@ -1,14 +1,25 @@
-<nav class="ui menu">
+<nav class="ui stackable menu">
   <header class="ui header item"> <a href="/start"> Playlist App </a></header>
   <div class="right menu">
-    <span class="profilepic"><img src="{{picture}}" class="ui avatar image"></span>
     <span class="name">{{fullname}}</span>
+    
+    <span class="profilepic">
+        <img src=
+          {{#if picture}}
+            "{{picture}}" 
+          {{else}}
+            "https://cdn.glitch.global/af108bc4-3b5f-42e5-8506-c18b7ace9550/istockphoto-1337144146-612x612.jpg?v=1743677682555"
+          {{/if}}
+          class="ui avatar image">
+    </span>
+    
     <a id="dashboard" class="item" href="/dashboard"> Dashboard  </a>
-    <a id="about" class="item" href="/about"> About </a>
+    <a id="about" class="item" href="/about"> About  </a>
+    <a id="search" class="item" href="/search"> Search</a>
     <a id="logout" class="item" href="/logout"> Logout </a>
   </div>
 </nav>
 
 <script>
-   document.querySelector("#{{id}}").classList.add("active");
+ document.querySelector("#{{id}}").classList.add("active");
 </script>

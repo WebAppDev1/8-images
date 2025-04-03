@@ -2,4 +2,49 @@
 
 <section class="ui center aligned middle aligned segment">
   <p> Sign up or Log in... </p>
-</section>
+  
+   <div class="sixteen wide column bordered">
+  <h2>
+    Overall PlayCollection Statistics
+  </h2>
+  
+      
+        <div class="ui centered four statistics">
+          <div class="red statistic">
+            <div class="value">
+              <i class="microphone icon"></i> 
+            </div>
+            <div class="label">
+              {{numPlaylists}} playlists
+            </div>
+          </div>
+
+          <div class="orange statistic">
+            <div class="value">
+              <i class="music icon"></i> 
+            </div>
+            <div class="label">
+              {{numSongs}} songs
+            </div>
+          </div>    
+      
+          <div class="yellow statistic">
+            <div class="value">
+              <i class="fast forward icon"></i> 
+            </div>
+            <div class="label">
+              Average songs per <br> playlist: {{average}}
+            </div>
+          </div>    
+          
+          <div class="blue statistic">
+            <div class="value">
+              <i class="user icon"></i> 
+            </div>
+            <div class="label">
+              {{numUsers}} users
+            </div>
+          </div>
+        </div>
+      
+    </div>

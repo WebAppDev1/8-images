@@ -13,8 +13,13 @@ body {
   background-color: lightgrey;
 }
 
-.hide, .hidep{
-  display: none;
+.editSubmit {
+  border:none;
+  background: none;
+}
+
+.hide{
+    display: none;
 }
 
 .name{
@@ -23,6 +28,13 @@ body {
   line-height:20px;
   font-weight:bold;
   text-transform:capitalize;
+}
+
+.bordered {
+  border: solid grey 2px;
+  padding: 1em;
+  background-color: #fffdd0;
+  border-radius: 20px;
 }
 
 .profilepic{

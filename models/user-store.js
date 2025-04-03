@@ -2,19 +2,6 @@
 
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
-import cloudinary from 'cloudinary';
-
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
-try {
-  const env = require("../.data/.env.json");
-  cloudinary.config(env.cloudinary);
-}
-catch(e) {
-  logger.info('You must provide a Cloudinary credentials file - see README.md');
-  process.exit(1);
-}
 
 const userStore = {
 
@@ -34,20 +21,16 @@ const userStore = {
   },
   
   async addUser(user, response) {
-    function uploader(){
-      return new Promise(function(resolve, reject) {  
-        cloudinary.uploader.upload(user.picture.tempFilePath,function(result,err){
-          if(err){console.log(err);}
-          resolve(result);
-        });
-      });
+    try {
+      user.picture = await this.store.uploader(user);
+      this.store.addCollection(this.collection, user);
+      response();
+    } 
+    // error handling
+    catch (error) {
+      logger.error("Error processing user:", error);
+      response(error);
     }
-    let result = await uploader();
-    logger.info('cloudinary result', result);
-    user.picture = result.url;
-
-    this.store.addCollection(this.collection, user);
-    response();
   },
 
 };

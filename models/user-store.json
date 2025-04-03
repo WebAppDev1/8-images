@@ -18,16 +18,9 @@
       "firstName": "Rosanne",
       "lastName": "Birney",
       "email": "rosanne@gmail.com",
-      "password": "secret",
-      "id": "4159f0e4-bc67-40d9-9e22-a3cd320df6a9"
-    },
-    {
-      "firstName": "Rosanne",
-      "lastName": "Birney",
-      "email": "rosanne31@gmail.com",
-      "password": "secret",
-      "id": "5b8522c5-c807-43ba-8b73-242df3b1908c",
-      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1713540539/htocgjk4fwfmcshytztz.jpg"
+      "password": "test",
+      "id": "16a05c52-d5cf-4753-9ff8-aa4682283f2a",
+      "picture": "http://res.cloudinary.com/webappdev1/image/upload/v1743677928/tddy4evkj4fioapdqfgu.jpg"
     }
   ]
 }
