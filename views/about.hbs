@@ -2,9 +2,9 @@
 
 <section class="ui center aligned middle aligned segment">
   
-  <h2>Your app statistics</h2>
+  <h2>About the Playlist App</h2>
   <p>
-    Thanks for using our app!
+    The playlist app now contains: 
   </p>
   
   <div class="ui center aligned grid">
@@ -41,31 +41,32 @@
       
     </div>
     
-    <div class="sixteen wide column">
+    <div class="two column row">
       
-        <div class="ui centered two statistics">
-          <div class="green statistic">
-            <div class="value">
-              <i class="plus square outline icon"></i> 
-            </div>
-            <div class="label">
-              Largest playlist: <br> {{largest}}
-            </div>
+      <div class="column">
+        <div class="ui green statistic">
+          <div class="value">
+            <i class="plus square outline icon"></i> 
           </div>
-
-          <div class="blue statistic">
-            <div class="value">
-              <i class="minus square outline icon"></i> 
-            </div>
-            <div class="label">
-              Smallest playlist: <br> {{smallest}}
-            </div>
-          </div>    
-         
+          <div class="label">
+            Largest playlist: <br> {{largest}}
+          </div>
         </div>
+      </div>
+
+      <div class="column">
+        <div class="ui blue statistic">
+          <div class="value">
+            <i class="minus square outline icon"></i> 
+          </div>
+          <div class="label">
+            Smallest playlist: <br> {{smallest}}
+          </div>
+        </div>    
+      </div>
       
     </div>
-    
+      
   </div>
 
 </section>

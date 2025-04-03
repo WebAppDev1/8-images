@@ -1,37 +1,33 @@
 {{#if songs}}
 
-  <table class="ui striped table">
+  <table class="ui unstackable striped table">
     <thead>
       <tr>
-        <th class="four wide">Song</th>
-        <th class="four wide">Artist</th>
-        <th class="three wide">Genre</th>
-        <th class="three wide">Duration</th>
-        <th class="one wide"> </th>
-        <th class="one wide"> </th>
+        <th class="six wide">Song</th>
+        <th class="six wide">Artist</th>
+        <th class="two wide"> </th>
+        <th class="two wide"> </th>
       </tr>
     </thead>
-  <tbody>
-    
+    <tbody>
       
-    {{#each songs}}
+      {{#each songs}}
       
         {{> listOneSong playlistId=../id}}
         {{> editsong playlistId=../id}}
-    
-
+               
         <script>
-         document.querySelector("#showEdit{{@index}}").addEventListener ('click', () => {
-            document.querySelector("#song{{@index}}").style.display = "none";
-            document.querySelector("#edit{{@index}}").style.display = "table-row";
-         })
-         document.querySelector("#hideEdit{{@index}}").addEventListener ('click', () => {
-            document.querySelector("#song{{@index}}").style.display = "table-row";
-            document.querySelector("#edit{{@index}}").style.display = "none";
-         })
+            document.querySelector("#showEdit{{@index}}").addEventListener ('click', () => {
+                document.querySelector("#song{{@index}}").style.display = "none";
+                document.querySelector("#edit{{@index}}").style.display = "table-row";
+            })
+            document.querySelector("#hideEdit{{@index}}").addEventListener ('click', () => {
+                document.querySelector("#song{{@index}}").style.display = "table-row";
+                document.querySelector("#edit{{@index}}").style.display = "none";
+            })
         </script>
-                
-    {{/each}}
+
+      {{/each}}
     
     </tbody>
   </table>

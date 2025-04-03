@@ -2,6 +2,7 @@
 
 import logger from '../utils/logger.js';
 import userStore from '../models/user-store.js';
+import playlistStore from "../models/playlist-store.js";
 import { v4 as uuidv4 } from 'uuid';
 
 //create an accounts object
@@ -9,8 +10,31 @@ const accounts = {
 
   //index function to render index page
   index(request, response) {
+  
+    // app statistics calculations
+    const playlists = playlistStore.getAllPlaylists();
+    const users = userStore.getAllUsers();
+    
+    let numPlaylists = playlists.length;
+    let numSongs = 0;
+
+    for (let item of playlists) {
+        numSongs += item.songs.length;
+    }
+    
+    let average = 0;
+    if (numPlaylists > 0) {
+      average = (numSongs / numPlaylists).toFixed(1);
+    }
+    
+    let numUsers = users.length;
+    
     const viewData = {
       title: 'Login or Signup',
+      numPlaylists: numPlaylists,
+      numSongs: numSongs,
+      numUsers: numUsers,
+      average: average
     };
     response.render('index', viewData);
   },
@@ -38,22 +62,22 @@ const accounts = {
   },
   
  //register function to render the registration page for adding a new user
-  register(request, response) {
-    const user = request.body;
+  register(request, response) {    
+    const user = request.body;   
     user.id = uuidv4();
     user.picture = request.files.picture;
-    userStore.addUser(user, function() {
-      logger.info('registering' + user.email);
+    
+    userStore.addUser(user, function(){
+      logger.info('registering ' + user.email);
       response.cookie('playlist', user.email);
-      logger.info('logging in' + user.email);
       response.redirect('/start');
     });
- 
   },
   
   //authenticate function to check user credentials and either render the login page again or the start page.
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
+    
     if (user && user.password === request.body.password) {
       response.cookie('playlist', user.email);
       logger.info('logging in' + user.email);

@@ -1,12 +1,24 @@
 {
   "playlistCollection": [
     {
-      "id": "4bba28a4-8c29-4876-9bde-70564349668f",
-      "userid": "5b8522c5-c807-43ba-8b73-242df3b1908c",
-      "title": "test",
+      "id": "dc054c24-87c6-4299-93b8-5ceb24da8c05",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Ada's Amazing playlist",
+      "category": "Pop",
+      "rating": "5",
       "songs": [],
-      "date": "2024-04-19T15:29:29.783Z",
-      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1713540569/kcupmbznywmlwgukgt4v.jpg"
+      "date": "2025-04-03T08:04:56.328Z",
+      "picture": "http://res.cloudinary.com/webappdev1/image/upload/v1743667496/mzwug2kofxyp17mf0pnx.jpg"
+    },
+    {
+      "id": "4ffb5cbf-90cd-4a7a-9fe0-760cc5dfc6da",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Finnegan's fun tunes",
+      "category": "Rock",
+      "rating": "3",
+      "songs": [],
+      "date": "2025-04-03T08:05:46.580Z",
+      "picture": "http://res.cloudinary.com/webappdev1/image/upload/v1743667546/g4j6tcg8v3ze9mhm0oaz.jpg"
     }
   ]
 }
